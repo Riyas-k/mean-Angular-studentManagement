@@ -4,10 +4,12 @@ dotenv.config();
 import connection from "./models/connection.js";
 import bodyParser from "body-parser";
 import studentRouter from "./routes/studentRoutes.js";
+import cors from "cors";
 const app = express();
 
 app.use(bodyParser.json());
-app.use("/api/students", studentRouter);
+app.use(cors());
+app.use("/api", studentRouter);
 
 const PORT = process.env.PORT || 5000;
 

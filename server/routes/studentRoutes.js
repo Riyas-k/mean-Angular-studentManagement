@@ -8,7 +8,7 @@ import {
 
 const router = express.Router();
 
-router.get("/", getAllStudents);
+router.get("/students", getAllStudents);
 
 router.post("/create-student", createStudent);
 
